@@ -23,16 +23,14 @@ class GP_Add_GP_Profile_to_WP_Profile {
 	}
 
 	public function gp_wp_profile( $user ) {
+		// If the user can edit their profile, then show the edit screen otherwise don't display anything.
+		if ( ! current_user_can( 'edit_user', $user->ID ) ) { 
+			return;
+		}		
 	?>
 		<h3 id="gp-profile"><?php _e( 'GlotPress Profile', 'glotpress' ); ?></h3>
 	<?php		
-		
-		// If the user can edit their profile, then show the edit screen otherwise only display a view of the settings.
-		if ( current_user_can( 'edit_user', $user->ID ) ) { 
-			include( GP_PATH . './gp-templates/profile-edit.php' );
-		} else {
-			include( GP_PATH . './gp-templates/profile-view.php' );
-		}		
+		include( GP_PATH . './gp-templates/profile-edit.php' );
 	}
 
 	public function gp_wp_profile_update( $user_id ) {

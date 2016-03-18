@@ -4,7 +4,7 @@ Plugin Name: GP Add GP Profile to WP Profile
 Plugin URI: http://glotpress.org/
 Description: A plugin for GlotPress as a WordPress Plugin that adds the GlotPress user profile settings to the WordPress profile page.
 Version: 0.5
-Author: GregRoss
+Author: Greg Ross
 Author URI: http://toolstack.com
 Tags: glotpress, glotpress plugin, translate
 License: GPLv2 or later

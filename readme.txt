@@ -16,7 +16,7 @@ A plugin for GlotPress as a WordPress Plugin that adds the GlotPress user profil
 
 A plugin for [GlotPress as a WordPress plugin](https://github.com/GlotPress/GlotPress-WP) that adds the GlotPress user profile settings to the WordPress profile page.
 
-Requires GlotPress V1.1 or above.
+Requires GlotPress V2.0 or above.
 
 == Installation ==
 

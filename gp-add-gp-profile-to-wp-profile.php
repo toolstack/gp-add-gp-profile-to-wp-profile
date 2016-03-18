@@ -53,7 +53,7 @@ add_action( 'gp_init', 'gp_add_gp_profile_to_wp_profile_init' );
 function gp_add_gp_profile_to_wp_profile_init() {
 	GLOBAL $gp_add_gp_profile_to_wp_profile;
 	
-	if( version_compare( GP_VERSION, '1.1', '>=' ) ) {
+	if( version_compare( GP_VERSION, '2.0', '>=' ) ) {
 		$gp_add_gp_profile_to_wp_profile = new GP_Add_GP_Profile_to_WP_Profile;
 	}
 }

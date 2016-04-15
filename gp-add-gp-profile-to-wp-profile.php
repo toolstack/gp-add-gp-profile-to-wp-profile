@@ -37,9 +37,9 @@ class GP_Add_GP_Profile_to_WP_Profile {
 		// If the user cannot edit their profile, then don't save the settings
 		if ( !current_user_can( 'edit_user', $user_id ) ) { return false; }
 		
-		$gp_route_profile = new GP_Route_Profile;
+		$gp_route_settings = new GP_Route_Settings;
 		
-		$gp_route_profile->profile_post( $user_id );
+		$gp_route_settings->settings_post( $user_id );
 		
 		return true;
 	}

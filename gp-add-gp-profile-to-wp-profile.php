@@ -30,7 +30,7 @@ class GP_Add_GP_Profile_to_WP_Profile {
 	?>
 		<h3 id="gp-profile"><?php _e( 'GlotPress Profile', 'glotpress' ); ?></h3>
 	<?php		
-		include( GP_PATH . './gp-templates/settings-edit.php' );
+		include( GP_TMPL_PATH . 'settings-edit.php' );
 	}
 
 	public function gp_wp_profile_update( $user_id ) {

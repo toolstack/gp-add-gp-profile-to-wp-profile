@@ -1,11 +1,12 @@
 <?php
 /*
 Plugin Name: GP Add GP Profile to WP Profile
-Plugin URI: http://glotpress.org/
+Plugin URI: https://glotpress.blog/
 Description: A plugin for GlotPress as a WordPress Plugin that adds the GlotPress user profile settings to the WordPress profile page.
 Version: 0.6
 Author: Greg Ross
-Author URI: http://toolstack.com
+Author URI: https://toolstack.com/
+Text Domain: gp-add-gp-profile-to-wp-profile
 Tags: glotpress, glotpress plugin, translate
 License: GPLv2 or later
 */
@@ -28,7 +29,7 @@ class GP_Add_GP_Profile_to_WP_Profile {
 			return;
 		}		
 	?>
-		<h3 id="gp-profile"><?php _e( 'GlotPress Profile', 'glotpress' ); ?></h3>
+		<h3 id="gp-profile"><?php _e( 'GlotPress Profile', 'gp-add-gp-profile-to-wp-profile' ); ?></h3>
 	<?php		
 		$template = 'settings-edit';
 		$locations = array( GP_TMPL_PATH );
@@ -42,6 +43,10 @@ class GP_Add_GP_Profile_to_WP_Profile {
 		}	
 	}
 
+	public function load_text_domain() {
+		load_plugin_textdomain( gp-add-gp-profile-to-wp-profile, false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	}
+	
 	public function gp_wp_profile_update( $user_id ) {
 		// If the user cannot edit their profile, then don't save the settings
 		if ( !current_user_can( 'edit_user', $user_id ) ) { return false; }
